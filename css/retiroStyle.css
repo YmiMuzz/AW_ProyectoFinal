@@ -1,8 +1,3 @@
-
-/* ------------------ R E T I R O   S I N   T A R J E T A --------------------*/
-/* =========================================================
-   ESTILOS GENERALES DEL DISEÑO (Solo para esta página)
-   ========================================================= */
 .retiro-page {
     background: #f4f6fa;
     font-family: "Inter", Arial, sans-serif;
@@ -10,7 +5,6 @@
     padding: 0;
 }
 
-/* CONTENEDOR PRINCIPAL DE TODO EL DISEÑO */
 .retiro-page .main-wrapper {
     display: flex;
     width: 100%;
@@ -20,10 +14,6 @@
     gap: 40px;
 }
 
-
-/* =========================================================
-   HEADER AZUL SUPERIOR (solo afecta a ESTA pantalla)
-   ========================================================= */
 .retiro-page .header-superior {
     background: linear-gradient(135deg, #2d6dff, #4e2eff);
     color: white;
@@ -31,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;            /* FIX: asegurar que ocupa todo el ancho */
+    width: 100%;            
     box-sizing: border-box;
 }
 
@@ -59,8 +49,6 @@
     font-weight: 600;
 }
 
-
-/* PT.  COLUMNA IZQUIERDA ( T A R J E T A S  B L A N C A S ) */
 .retiro-page .left-column {
     flex: 1;
     display: flex;
@@ -69,7 +57,6 @@
     padding-right: 20px;
 }
 
-/* TARJETAS BLANCAS */
 .retiro-page .info-card {
     background: white;
     padding: 16px;
@@ -80,7 +67,6 @@
     align-items: center;
 }
 
-/* ICONO REDONDO */
 .retiro-page .card-icon {
     width: 46px;
     height: 46px;
@@ -94,12 +80,10 @@
     width: 26px;
 }
 
-/* Iconos colores */
 .retiro-page .blue-icon { background: #e7edff; }
 .retiro-page .yellow-icon { background: #fff5d6; }
 .retiro-page .green-check { background: #d4f8e3; }
 
-/* card title: Fecha de... */
 .retiro-page .card-title {
     font-size: 14px;
     font-weight: 600;
@@ -288,4 +272,5 @@
 .navbar .btn-sm {
     padding: 4px 12px !important;
     font-weight: 600;
+
 }
