@@ -15,7 +15,6 @@ function calcularTotal() {
     return total;
 }
 
-// --- Lógica de Visualización (Específica para cada página) ---
 
 function mostrarTotal() {
     const totalDiv = document.getElementById("total");
@@ -28,16 +27,16 @@ function mostrarTotal() {
 
 function mostrarMovimientos() {
     let div = document.getElementById("movimientos");
-    if (!div) return; // Solo ejecuta si el elemento existe (en estadocuenta.html)
+    if (!div) return; 
 
     div.innerHTML = "";
 
-    // Muestra los movimientos del más reciente al más antiguo
+   
     [...movimientos].reverse().forEach(m => {
         let item = document.createElement("div");
         item.classList.add("movimiento-item");
 
-        const fecha = new Date(m.fecha || Date.now()); // Usa la fecha guardada o la actual
+        const fecha = new Date(m.fecha || Date.now()); 
         const fechaFormateada = fecha.toLocaleString('es-MX', {
             month: '2-digit', day: '2-digit', year: 'numeric',
             hour: '2-digit', minute: '2-digit', second: '2-digit',
@@ -55,21 +54,19 @@ function mostrarMovimientos() {
 document.addEventListener('DOMContentLoaded', () => {
     // Si la página actual es movimientos.html, se añaden los listeners
     if (document.getElementById("btnDepositar")) {
-        mostrarTotal(); // Muestra el total al cargar movimientos.html
-        // Resto del código...
+        mostrarTotal(); 
+        
     }
 });
 
 
-// ---------------------
-//   EVENTOS (Se ejecutan solo en movimientos.html)
-// ---------------------
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Si la página actual es movimientos.html, se añaden los listeners
     if (document.getElementById("btnDepositar")) {
 
-        mostrarTotal(); // Muestra el total al cargar movimientos.html
+        mostrarTotal(); 
 
         // Seleccionar billete
         document.querySelectorAll(".billete").forEach(b => {
@@ -134,15 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Si la página actual es estadocuenta.html, se muestran los movimientos
+   
     if (document.getElementById("movimientos")) {
         mostrarMovimientos();
     }
 });
 
-// Implementación simple de inicio de sesión y registro para navegación
 
-// Login
+
+
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
@@ -178,20 +175,20 @@ if (registroForm) {
         const correo = document.getElementById('correo');
         const contrasena = document.getElementById('contrasena');
 
-        const Cantidad_Disponible = 0.00; //"Dinero disponible en la cuenta"
-        const base = '415231364330'; //Esta es la base de las tarjetas/cuenta
+        const Cantidad_Disponible = 0.00; 
+        const base = '415231364330'; 
 
         let usuariosExistentes = JSON.parse(localStorage.getItem("usuarios")) || [];
         let conteoUsuarios = usuariosExistentes.length; //Obtenemos la cantidad de usuarios
         let cuenta = base + String(conteoUsuarios).padStart(4, '0'); //Junta la base y le agrega un numero de cuenta desde el 0000, 0001, etc segùn la cantidad de usuarios
         
-        //creamos el usuario
+        
         let usuario = {"nombre":nombre.value, "correo":correo.value, "contrasena":contrasena.value, "Cuenta": cuenta, "Cantidad_Disponible":Cantidad_Disponible };
         console.log("cuenta",cuenta,"usuario", usuario, nombre, correo, contrasena);
         
-       //localStorage.removeItem("usuarios");//Esta linea borra lo que hay en local storage, usarla cuando se necesite modificar algo del arreglo, como añadir un  
+         
 
-        //2. Lo guardamos en local storage
+        
         let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -209,7 +206,7 @@ tarjeta.addEventListener("click", function() {
     tarjeta.classList.toggle("girada");
 });
 
-// folio de 16 números
+
 function generarFolio() {
     let folio = "";
     for (let i = 0; i < 16; i++) {
@@ -221,7 +218,7 @@ function generarFolio() {
 
 // Generar CVV
 function generarCVV() {
-    return Math.floor(100 + Math.random() * 900); // 3 dígitos
+    return Math.floor(100 + Math.random() * 900); 
 }
 
 // Generar fecha de vencimiento
@@ -237,3 +234,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("cvv").textContent = generarCVV();
     document.getElementById("expira").textContent = generarFechaExp();
 });
+
