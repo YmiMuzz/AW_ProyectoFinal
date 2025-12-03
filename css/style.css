@@ -1,0 +1,364 @@
+/* Estilos Globales y Reset Básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ------------------- COLORES DE FONDO ------------------- */
+.bg-black-gradient {
+    /* index.html */
+    background: linear-gradient(to right, black, white);
+    color: white;
+}
+
+.bg-login {
+    /* login.html */
+    background-color: #2b3a4a;
+    /* Fondo azul oscuro del sidebar */
+}
+
+.bg-registro {
+    /* registro.html */
+    background-color: black;
+    color: white;
+}
+
+.bg-movimientos {
+    /* movimientos.html */
+    background-color: white;
+    color: #333;
+}
+
+.bg-estadocuenta {
+    /* estadocuenta.html */
+    background-color: #2b3a4a;
+    /* similar al login para el sidebar */
+}
+
+.bg-tarjeta {
+    /* tarjetadigital.html */
+    background-color: #f7f7f7;
+}
+
+/* ------------------- DISEÑO GENERAL (Sidebar) ------------------- */
+.sidebar {
+    width: 30%;
+    background-color: #2b3a4a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #5a9bd4;
+    /* Línea de la imagen */
+    padding-bottom: 5px;
+}
+
+/* ------------------- INDEX.HTML ------------------- */
+.container-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.container-inicio h1 {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.imagen-tarjeta img {
+    max-width: 200px;
+    margin-bottom: 50px;
+}
+
+.opciones-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.btn-inicio {
+    display: block;
+    padding: 15px 30px;
+    background-color: #1a5e95;
+    /* Azul oscuro */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-inicio:hover:not(.disabled) {
+    background-color: #2b74b1;
+}
+
+.btn-inicio.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ------------------- LOGIN.HTML ------------------- */
+.container-form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-icon {
+    /* icono de imagen falsa*/
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #286090;
+}
+
+/* ------------------- MOVIMIENTOS.HTML ------------------- */
+.bg-movimientos {
+    background-color: white;
+    display: block;
+    position: relative;
+    /* Simula la división con el color azul en la esquina */
+}
+
+.sidebar-movimientos {
+    width: 100%;
+    /* No es un sidebar lateral, sino una sección superior */
+    background-color: #337ab7;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.container-movimientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-direction: column;
+}
+
+.movimientos-box {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.movimientos-box h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.contenedor-billetes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    /* Para visualización */
+}
+
+.billete {
+    padding: 15px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.billete:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* Colores de billetes basados en la imagen */
+.billete-green {
+    background-color: #79c753;
+}
+
+.billete-orange {
+    background-color: #f6a655;
+}
+
+.billete-red {
+    background-color: #e54b4b;
+}
+
+.billete-blue {
+    background-color: #5d8bd4;
+}
+
+.billete-lightbrown {
+    background-color: #a08466;
+}
+
+.billete-darkbrown {
+    background-color: #5e4337;
+}
+
+.billete-gray {
+    background-color: #8c8c8c;
+}
+
+.billete-special {
+    background-color: transparent;
+    border: 1px solid #999;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.acciones-movimientos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-accion {
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.btn-depositar {
+    background-color: #db4473;
+}
+
+.btn-retirar {
+    background-color: #c93b6f;
+}
+
+.total-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.total-display {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-estado-cuenta {
+    display: inline-block;
+    background-color: #3498db;
+    /* Azul */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.volver-link {
+    color: #337ab7;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* ------------------- ESTADOCUENTA.HTML ------------------- */
+.container-estadocuenta {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.container-estadocuenta h2 {
+    font-size: 2.5em;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.movimientos-historial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.movimiento-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.movimiento-item p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.fecha-movimiento {
+    font-size: 0.8em;
+    color: #777;
+}

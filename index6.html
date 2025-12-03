@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi tarjeta virtual</title>
+    <link rel="stylesheet" href="css/tarjeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <div class="col-izquierda">
+        <h1 class="titulo-tarjeta">Mi tarjeta virtual</h1>
+        <div class="qr-panel">
+
+    <h2 class="qr-title">Código QR</h2>
+    <p class="qr-subtitle">Escanea para verificar</p>
+
+    <div class="qr-box">
+        <img src="img/qrFake.png" class="qr-image">
+        <p class="qr-id">VIP-2024-8547</p>
+    </div>
+
+    <button class="qr-info-btn">Este código te identifica de forma única</button>
+
+    <button class="qr-active-btn">✓ Código verificado y activo</button>
+
+</div>
+
+        <a href="index.html" class="btn-volver">Volver al inicio</a>
+    </div>
+
+    <div class="col-derecha">
+
+        <div class="flip-card">
+            <div class="flip-card-inner"> <!--Este es el que hace rotar la tarjeta-->
+
+                <div class="flip-card-front">
+
+                    <div class="tarjeta">
+                        <div class="chip"></div>
+
+                        <p class="folio" id="folio">#### #### #### ####</p>
+
+                        <div class="fila">
+                            <div>
+                                <p class="label">NOMBRE</p>
+                                <p class="nombre" id="nombreTarjeta">Usuario del Cajero</p>
+                            </div>
+
+                            <div>
+                                <p class="label">CVV</p>
+                                <p class="cvv" id="cvv">###</p>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div>
+                                <p class="label">VENCE</p>
+                                <p class="expira" id="expira">MM/YY</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Flips to the back -->
+                <div class="flip-card-back">
+                    <div class="banda-magnetica"></div>
+
+                    <div class="cuadro-cvv"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/miScript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+.bg-black-gradient {
+    background: linear-gradient(135deg, #2a3a85, #4b6cff, #7b3cf1);
+    min-height: 100vh;
+    color: white;
+    padding: 40px 15px;
+}
+
+.titulo-bienvenida 
+{
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.card-menu  
+ {
+    border: none;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px); /*Efecto vidrio, transparencia y desenfoque*/
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.card-menu:hover 
+{
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ------------------- P A R T E  I N T E R N A  T A R J E T A S ------------------*/
+.icono-opcion {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Texto de cada menú */
+.texto-opcion {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* flechita derecha x4 */
+.flecha {
+    font-size: 1.6rem;
+    color: #d6d6ff;
+    opacity: 0.9;
+}
+
+/* -------------------- R E S P O N S I V O O O O ------------------- */
+@media (max-width: 450px) {
+    .titulo-bienvenida {
+        font-size: 2.2rem;
+    }
+
+    .icono-opcion {
+        font-size: 1.8rem;
+    }
+
+    .texto-opcion {
+        font-size: 1rem;
+    }
+}

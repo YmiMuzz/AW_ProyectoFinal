@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro sin Tarjeta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/retiroStyle.css">
+
+</head>
+
+<body class="retiro-page">
+
+    <!-- N A V B A R   C O N   B O T O N   I N I C I O  -->
+    <nav class="navbar navbar-light bg-light border-bottom px-3 py-2">
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-primary btn-sm" onclick="window.location.href='index.html'">
+                Inicio
+            </button>
+        </div>
+    </nav>
+
+    <!-- H E A D E R  M O R A D O  -->
+    <header class="header-superior">
+        <div class="d-flex align-items-center">
+            <div class="ms-3">
+                <h2 class="header-title">Retiro sin Tarjeta</h2>
+                <p class="header-subtitle">Ingrese sus credenciales de seguridad</p>
+            </div>
+        </div>
+
+        <button class="btn btn-success header-button">Sin comisión</button>
+    </header>
+
+    <!-- M AIN WRAPPER -->
+    <div class="main-wrapper">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="left-column">
+
+            <div class="info-card">
+                <div class="card-icon blue-icon">
+                    <i class="bi bi-calendar2-date"></i>
+                </div>
+
+                <div>
+                    <p class="card-title">Fecha de Disponibilidad</p>
+                    <p class="card-value">
+                        <span id="fechaActual"></span><br>
+                        <span id="horaActual" class="card-small"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-icon yellow-icon">
+                    <i class="bi bi-clock-history"></i>
+                </div>
+
+                <div>
+                    <p class="card-title">Vigencia del Código</p>
+                    <p class="card-value">
+                        <span id="fechaVigencia"></span><br>
+                        <span class="card-small orange">Válido por 24 horas</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- T A R J E T A  M O N T O  -->
+            <div class="info-card green-card">
+                <div class="card-icon">
+                    <i class="bi bi-cash-coin"></i>
+                </div>
+                <div>
+                    <p class="card-title-white">Monto a retirar</p>
+                    <p class="card-money">$500.00</p>
+                    <p class="card-money-small">MXN • Pesos Mexicanos</p>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="info-card">
+                <div class="card-icon green-check">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                    <p class="card-title">Transacción sin cargo</p>
+                    <p class="card-small">Sin comisiones adicionales</p>
+                </div>
+            </div>
+
+            <!-- INPUT CLAVE -->
+            <p class="input-title">Clave de Retiro <span class="input-small">(12 dígitos)</span></p>
+            <input id="claveRetiro" maxlength="12" readonly onclick="seleccionarCampo('clave')" class="input-field">
+
+            <!-- INPUT PIN -->
+            <p class="input-title">PIN de Seguridad <span class="input-small">(4 dígitos)</span></p>
+            <input id="codigoSeguridad" maxlength="4" readonly onclick="seleccionarCampo('seguridad')"
+                class="input-field">
+
+        </div>
+
+        <div class="keyboard-section">
+
+            <h3 class="right-title">Panel de Ingreso</h3>
+
+            <div class="keypad">
+                <button class="key-btn" onclick="agregarNumero('1')">1</button>
+                <button class="key-btn" onclick="agregarNumero('2')">2</button>
+                <button class="key-btn" onclick="agregarNumero('3')">3</button>
+
+                <button class="key-btn" onclick="agregarNumero('4')">4</button>
+                <button class="key-btn" onclick="agregarNumero('5')">5</button>
+                <button class="key-btn" onclick="agregarNumero('6')">6</button>
+
+                <button class="key-btn" onclick="agregarNumero('7')">7</button>
+                <button class="key-btn" onclick="agregarNumero('8')">8</button>
+                <button class="key-btn" onclick="agregarNumero('9')">9</button>
+
+                <button class="key-btn red-btn" onclick="borrarNumero()">Borrar</button>
+                <button class="key-btn" onclick="agregarNumero('0')">0</button>
+                <button class="key-btn gray-btn" onclick="limpiarCampo()">
+                    <i class="bi bi-eraser"></i>
+                </button>
+            </div>
+
+            <!-- B A R R A  C L A V E  -->
+            <p class="bar-label">
+                Clave de retiro
+                <span id="countClave" class="bar-count">0/12</span>
+            </p>
+            <div class="progress" style="height: 10px;">
+                <div id="progClave" class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    style="width: 0%"></div>
+            </div>
+
+            <!-- B A R R A  P I N -->
+            <p class="bar-label">
+                PIN de seguridad
+                <span id="countPin" class="bar-count">0/4</span>
+            </p>
+            <div class="progress" style="height: 10px;">
+                <div id="progPin" class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                    style="width: 0%"></div>
+            </div>
+
+            <!-- B O T Ó N -->
+            <button id="btnRetirar" class="confirm-btn" onclick="realizarRetiro()" disabled>
+                Confirmar Retiro
+            </button>
+
+        </div>
+        
+    </div>
+
+    <script src="js/retiro.js"></script>
+
+</body>
+
+</html>

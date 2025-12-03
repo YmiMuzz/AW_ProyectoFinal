@@ -1,0 +1,177 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body 
+{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  width: 38%; /* poquitito menos de la mitad */
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid #eaeaea;
+}
+
+.sidebar .circle {
+  width: 110px;
+  height: 110px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.sidebar .circle i {
+  font-size: 50px;
+  color: #4b6cff;
+}
+
+.sidebar h2 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+}
+
+.bg-login {
+  width: 62%; 
+  background: linear-gradient(135deg, #4b6cff, #7b3cf1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  width: 360px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: white;
+}
+
+.profile-icon   {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 0 auto 20px;
+}
+
+.login-box input
+ {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.form-options{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.form-options a 
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.form-options a:hover 
+{
+  text-decoration: underline;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;/* Manita cursor*/
+  background: linear-gradient(135deg, #2d6dff, #4e2eff);
+  transition: 0.2s ease-in-out;
+}
+
+.btn-login:hover {
+  opacity: 0.9;
+}
+
+/* "Volver" */
+.login-box p a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-box p a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-features {
+  width: 100%;
+  margin-top: 25px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/*Cada cuadro */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* I -> Icono */
+.feature-item i {
+  font-size: 28px;
+  color: #4b6cff;
+}
+
+.feature-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}

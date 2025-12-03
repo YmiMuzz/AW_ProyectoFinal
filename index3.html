@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos - Mi Cajerito</title>
+    <link rel="stylesheet" href="css/move.css">
+</head>
+
+<body class="bg-movimientos">
+
+    <header class="header-mov">
+        <div class="d-flex align-items-center">
+            <h1>Movimientos</h1>
+        </div>
+
+        <div class="header-buttons">
+            <a href="index.html" class="btn-volver">Regresar</a>
+            <a href="index1.html" class="btn-cerrar">Cerrar sesión</a>
+        </div>
+        <div>
+            <a href="index5.html" class="btn-cerrar">Estado de Cuenta</a>
+            
+        </div>
+    </header>
+
+
+    <div class="container-movimientos">
+
+        <!-- R E C U A D R O  M O R A D O   S A L D O  -->
+        <div class="saldo-box">
+            <div class="saldo-header">
+                <span>Saldo Disponible</span>
+            </div>
+
+            <p id="total" class="saldo-cantidad">$0.00</p>
+
+            <hr class="saldo-linea">
+
+            <div class="saldo-info-row">
+                <div>
+                    <p class="saldo-info-label">Cuenta</p>
+                    <p class="saldo-info-value">****1234</p>
+                </div>
+
+                <div>
+                    <p class="saldo-info-label">Tipo</p>
+                    <p class="saldo-info-value">Débito</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="teclado-billetes-box">
+
+            <div class="contenedor-billetes">
+                <div class="billete billete-green" data-valor="1">$1</div>
+                <div class="billete billete-green" data-valor="2">$2</div>
+                <div class="billete billete-orange" data-valor="5">$5</div>
+                <div class="billete billete-red" data-valor="10">$10</div>
+                <div class="billete billete-blue" data-valor="20">$20</div>
+                <div class="billete billete-lightbrown" data-valor="50">$50</div>
+                <div class="billete billete-darkbrown" data-valor="100">$100</div>
+                <div class="billete billete-special" data-valor="200">$200</div>
+                <div class="billete billete-gray" data-valor="500">$500</div>
+            </div>
+
+            <div class="acciones-movimientos">
+                <button id="btnDepositar" class="btn-accion btn-depositar">Depositar</button>
+                <button id="btnRetirar" class="btn-accion btn-retirar">Retirar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/miScript.js"></script>
+</body>
+
+</html>
